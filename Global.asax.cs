@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web;
-using System.Web.Security;
-using System.Web.SessionState;
 
 namespace TechHouseBTL
 {
@@ -13,15 +10,15 @@ namespace TechHouseBTL
         {
 
             //khoi tao thong tin nguoi dung
-            
+
             Application["user"] = new List<User>();
             List<User> Listuser = (List<User>)Application["user"];
             Listuser.Add(new User("viet@gmail.com", "viet", "1234567"));
             Listuser.Add(new User("sang@gmail.com", "sang", "1234567"));
             Application["user"] = Listuser;
-            
 
-             
+
+
             Application["sanpham"] = new List<Product>();
             List<Product> listsp = (List<Product>)Application["sanpham"];
             listsp.Add(new Product("Iphone 13 Pro Max", "1", "btl/images/sp/iphone/ip13-pro_2.jpg", 10000000, 5));
@@ -42,12 +39,13 @@ namespace TechHouseBTL
             Application["oder"] = new List<Oder>();
             List<Oder> list = (List<Oder>)Application["oder"];
             Application["oder"] = list;
+            
 
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-           
+            Session["Count"] = 0;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

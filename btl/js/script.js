@@ -58,6 +58,9 @@
         dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 4000);
     }
-  
+   
+    function removeProduct(value) {
+        window.location.href = `cart.aspx?idrm=${value}`;
+    }
 }
 

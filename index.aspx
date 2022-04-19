@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="TechHouseBTL.index" %>
 
+
 <!DOCTYPE html>
 
 <html>
@@ -16,6 +17,7 @@
     <script src="btl/js/script.js?v=123"></script>
     <title>TechHouse</title>
 
+  
 </head>
 <body>
    
@@ -68,7 +70,7 @@
                     <h1><a href="index.aspx">TechHouse</a></h1>
                 </div>
                 <div class="search-bar">
-                    <input type="text" placeholder="nhập tìm kiếm..." maxlength="100">
+                    <input type="text" placeholder="nhập tìm kiếm..." maxlength="100" list="list">
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="header-contact">
@@ -79,15 +81,17 @@
                         <span>
                             Hotline: <br />
                             0963638362
+                          
                         </span>
                     </div>
                     <div class="header-user">
                            <%
-                               
+                              
                                if(Session["name"] != null)
                                {
                                    Response.Write("<span>"+Session["name"]+"</span><span><a href='signout.aspx'>Đăng xuất</a></span>");
-                                  // Response.Write(Session["name"]);
+                                   // Response.Write(Session["name"]);
+
                                }
                                else
                                {
@@ -100,7 +104,7 @@
                             <span class="cart">
                                 
                                     <i class="fa fa-cart-plus fa-2x"></i>
-                                    <sup id="count" runat="server">0</sup>
+                                    <sup id="count" runat="server"><% Response.Write(Session["Count"].ToString()); %></sup>
                                
 
 
@@ -219,107 +223,6 @@
 
                 <div class="device_product" id ="product_show" runat="server">
                     
-
-                    <%--<a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/iphone/ip13-pro_2.jpg" alt="">
-                        <p class="mobile_name">
-                            Iphone 13 ProMax
-                        </p>
-                        <p class="mobile_paid">
-                            30.000.000đ
-                        </p>
-                    </a>
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/iphone/ipad-pro-12-9-2021-1-0009.jpg" alt="">
-                        <p class="mobile_name">
-                            Ipad pro 2021
-                        </p>
-                        <p class="mobile_paid">
-                            30.000.000đ
-                        </p>
-                    </a>
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/samsung/samsung-galaxy-s21-fe.jpg" alt="">
-                        <p class="mobile_name">
-                            Samsung s21 fe
-                        </p>
-                        <p class="mobile_paid">
-                            25.900.000đ <s> 27.000.000đ</s>
-                        </p>
-
-                        <span class="sale">-5%</span>
-                    </a>
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/xiaomi/xiaomi-mi-10t-pro_2_.jpg" alt="">
-                        <p class="mobile_name">
-                            xiaomi Mi 10t Pro
-                        </p>
-                        <p class="mobile_paid">
-                            26.550.000đ <s>28.800.000đ</s>
-                        </p>
-                        <span class="sale">-2%</span>
-                    </a>
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/iphone/iphone_11_white_4_.jpg" alt="">
-                        <p class="mobile_name">
-                            Iphone 11
-                        </p>
-                        <p class="mobile_paid">
-                            20.000.000đ
-                        </p>
-
-                    </a>
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/samsung/samsung-galaxy-tab-s8-002.jpg" alt="">
-                        <p class="mobile_name">
-                            Samsung galaxy tab S8
-                        </p>
-                        <p class="mobile_paid">
-                            30.000.000đ
-                        </p>
-                    </a>
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/xiaomi/xiaomi-mi-11-lite-5g-2_10.jpg" alt="">
-                        <p class="mobile_name">
-                            Xiaomi mi11 lite 5g
-                        </p>
-                        <p class="mobile_paid">
-                            26.600.000đ <s>28.300.000đ</s>
-                        </p>
-                        <span class="sale">-3%</span>
-                    </a>
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/samsung/samsung-galaxy-tab-s7-1.jpg" alt="">
-                        <p class="mobile_name">
-                            Samsung galaxy tab S8
-                        </p>
-                        <p class="mobile_paid">
-                            26.600.000đ <s>28.300.000đ</s>
-                        </p>
-                        <span class="sale">-5%</span>
-                    </a>
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/iphone/iphone_12_pro_max_white_1.jpg" alt="">
-                        <p class="mobile_name">
-                            Iphone 12 pro max
-                        </p>
-                        <p class="mobile_paid">
-                            25.000.000đ
-                        </p>
-                    </a>
-
-                    <a href="detailCart.aspx" class="mobile_info">
-                        <img src="btl/images/sp/iphone/iphoneSE.jpg" alt="">
-                        <p class="mobile_name">
-                            Iphone SE 2
-                        </p>
-                        <p class="mobile_paid">
-                            17.550.000đ <s>19.550.000đ</s>
-                        </p>
-                        <span class="sale">-10%</span>
-                    </a>--%>
-
-
                 </div>
 
 
@@ -520,7 +423,7 @@
                 <!-- footer content 1 -->
                 <div class="col c-4 m-12 pd-3 footer__content1">
                     <h4 class="pd-3 text-main"> Giới thiệu</h4>
-                    <div class="pd-1 ">
+                    <div class="pd-1 text-center ">
                         <p class="pd-1 ">Trang mua sắm trực tuyến của thương hiệu Apple ,phụ kiện, giúp bạn tiếp cận xu
                             hướng công nghệ mới nhất.</p>
                         <img class="pd-1 c-5" src="./btl/Image/logo_bocongthuong.png" alt="">

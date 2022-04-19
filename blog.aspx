@@ -100,7 +100,7 @@
                                <span>
                                    <figure class="cart">
                                       <i class="fa fa-cart-plus fa-2x"></i>
-                                      <sup id="count" runat="server">0</sup>
+                                      <sup id="count" runat="server"><% Response.Write(Session["Count"].ToString()); %></sup>
                                    </figure>
                                   
                                    

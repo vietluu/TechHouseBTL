@@ -28,7 +28,6 @@ function process() {
    
     window.location.href = `OderProcess.aspx?id=${g}&name=${b}&img=${a}&color=${c}&size=${d}&paid=${f}`;
 
-    
 }
 listImages.forEach((imgElement, index) => {
 

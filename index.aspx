@@ -473,4 +473,5 @@
     </footer>
 
 </body>
+     <script src="btl/js/SlideImage.js"></script>
 </html>

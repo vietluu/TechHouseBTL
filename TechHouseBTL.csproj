@@ -80,6 +80,7 @@
     <Content Include="btl\css\SignUp.css" />
     <Content Include="btl\css\style.css" />
     <Content Include="btl\js\script.js" />
+    <Content Include="btl\js\SlideImage.js" />
     <Content Include="btl\js\slideShowDetailProduct.js" />
     <Content Include="btl\js\validateSignIn.js" />
     <Content Include="btl\js\validateSignUp.js" />

@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="btl/css/reset.css">
     <link rel="stylesheet" href="btl/css/grid.css">
     <link rel="stylesheet" href="btl/css/all.min.css">
-    
-    <script src="btl/js/script.js?v=123"></script>
+    <script src="btl/js/script.js"></script>
 </head>
 <body>
     <form id="cart" runat="server">
@@ -101,7 +100,7 @@
                              <span class="cart">
                                  
                                     <i class="fa fa-cart-plus fa-2x"></i>
-                                    <sup id="count" runat="server">0</sup>
+                                    <sup id="count" runat="server"><% Response.Write(Session["Count"].ToString()); %></sup>
                                  
                                 
                                  
@@ -278,5 +277,10 @@
     </div>
    </footer>
     </form>
+    <script>
+        function removeProduct(value) {
+            window.location.href = `cart.aspx?idrm=${value}`;
+        }
+    </script>
 </body>
 </html>

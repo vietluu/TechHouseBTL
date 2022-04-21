@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
 namespace TechHouseBTL
 {
     public partial class signIn : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["email"] != null)
+            if (Session["email"] != null)
             {
                 Response.Redirect("index.aspx");
             }
@@ -36,6 +32,19 @@ namespace TechHouseBTL
                         {
                             Session["name"] = a.Name;
                             Session["email"] = a.Email;
+                            List<Oder> listsp = new List<Oder>();
+                            listsp = (List<Oder>)Application["oder"];
+                            int i = 0;
+                            foreach (Oder x in listsp)
+                            {
+                                if (x.UserID == (string)Session["email"])
+                                {
+                                    i++;
+                                }
+
+                            }
+
+                            Session["count"] = i;
                             if (id != "" || name != "" || img != "" || paid != "" || size != "" || color != "")
                             {
                                 Response.Redirect("detailCart.aspx?id=" + id);
@@ -48,7 +57,7 @@ namespace TechHouseBTL
 
                 }
             }
-            
+
         }
     }
 }

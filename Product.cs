@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web;
-
-namespace TechHouseBTL
+﻿namespace TechHouseBTL
 {
     public class Product
     {
@@ -11,7 +7,7 @@ namespace TechHouseBTL
         string imgSp;
         int paid;
         int sale;
-     
+
 
         public Product(string namesp, string id, string imgSp, int paid, int sale)
         {
@@ -20,8 +16,8 @@ namespace TechHouseBTL
             this.ImgSp = imgSp;
             this.Paid = paid;
             this.Sale = sale;
-            
-           
+
+
         }
 
         public string Namesp { get => namesp; set => namesp = value; }
@@ -29,7 +25,7 @@ namespace TechHouseBTL
         public string ImgSp { get => imgSp; set => imgSp = value; }
         public int Paid { get => paid; set => paid = value; }
         public int Sale { get => sale; set => sale = value; }
-       
+
     }
-   
+
 }

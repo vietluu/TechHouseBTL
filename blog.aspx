@@ -157,15 +157,15 @@
           <div class="row container">
 
                <!-- Tin Tức -->
-               <div class="col l-9 c-12 newfeed__tin-tuc">
+               <div class="col c-12 newfeed__tin-tuc">
                     <h1 class="new__feed-h1">Tin tức</h1>
                     <div class="row">
-                         <div class="col l-4 c-12">
+                         <div class="col c-4">
                               <div class="image">
                                    <img src="https://file.hstatic.net/1000406564/article/blogs3_b00e56c4b26642d4a73222a4f9bc8111_large.jpg" alt="">
                               </div>
                          </div>
-                         <div class="col l-8 c-12">
+                         <div class="col c-8">
                               <div class="paragraph">
                                    <a href="#">Apple có thể sớm tung ra siêu phẩm Iphone giá rẻ mới</a>
                                    <span><small>19 Tháng Một, 2022</small></span>
@@ -174,12 +174,12 @@
                          </div>
                     </div>
                     <div class="row">
-                         <div class="col l-4">
+                         <div class="col c-4">
                               <div class="image">
                                    <img src="https://images.fpt.shop/unsafe/filters:quality(90)/fptshop.com.vn/uploads/images/tin-tuc/142456/Originals/thong-tin-OPPO-Find-X5-Pro-cover.jpg" alt="">
                               </div>
                          </div>
-                         <div class="col l-8">
+                         <div class="col c-8">
                               <div class="paragraph">
                                    <a href="#">OPPO Find X5 và Find X5 Pro được xác nhận hỗ trợ sạc nhanh...</a>
                                    <span><small>20 Tháng Một, 2022</small></span>
@@ -188,12 +188,12 @@
                          </div>
                     </div>
                     <div class="row">
-                         <div class="col l-4">
+                         <div class="col c-4">
                               <div class="image">
                                    <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2022/01/so-sanh-cover.jpg" alt="">
                               </div>
                          </div>
-                         <div class="col l-8">
+                         <div class="col c-8">
                               <div class="paragraph">
                                    <a href="#">So sánh Galaxy S22 Ultra và Galaxy S21 Ultra dựa trên loạt tin đồn và rò rỉ: Sự khác biệt là gì?</a>
                                    <span><small>18 tháng Một 2022</small></span>
@@ -207,16 +207,16 @@
                </div>
 
                <!-- Bài viết mới nhất -->
-               <div class="col l-3 c-12 newfeed__bai-moi">
+               <div class="col c-12 newfeed__bai-moi">
                     <h1 class="new__feed-h1">Bài viết mới nhất</h1>
                     <div class="row">
-                         <div class="col l-4">
+                         <div class="col c-4">
                               <div class="image">
                                    <img src="https://file.hstatic.net/1000406564/article/blogs3_b00e56c4b26642d4a73222a4f9bc8111_large.jpg" alt="">
                               </div>
                          </div>
 
-                         <div class="col l-8">
+                         <div class="col c-8">
                               <div class="paragraph">
                                    <a class="a__baimoi-title" href="#">Apple có thể sớm tung ra siêu phẩm Iphone...</a>
                                    <a class="a-nhacungcap" href="#">TechHose</a>
@@ -225,13 +225,13 @@
                          </div>
                     </div>
                     <div class="row">
-                         <div class="col l-4">
+                         <div class="col c-4">
                               <div class="image">
                                    <img src="https://file.hstatic.net/1000406564/article/blogs3_b00e56c4b26642d4a73222a4f9bc8111_large.jpg" alt="">
                               </div>
                          </div>
 
-                         <div class="col l-8">
+                         <div class="col c-8">
                               <div class="paragraph">
                                    <a class="a__baimoi-title" href="#">Apple có thể sớm tung ra siêu phẩm Iphone...</a>
                                    <a class="a-nhacungcap" href="#">TechHose</a>
@@ -240,13 +240,13 @@
                          </div>
                     </div>
                     <div class="row">
-                         <div class="col l-4">
+                         <div class="col c-4">
                               <div class="image">
                                    <img src="https://file.hstatic.net/1000406564/article/blogs3_b00e56c4b26642d4a73222a4f9bc8111_large.jpg" alt="">
                               </div>
                          </div>
 
-                         <div class="col l-8">
+                         <div class="col c-8">
                               <div class="paragraph">
                                    <a class="a__baimoi-title" href="#">Apple có thể sớm tung ra siêu phẩm Iphone...</a>
                                    <a class="a-nhacungcap" href="#">TechHose</a>
@@ -255,13 +255,13 @@
                          </div>
                     </div>
                     <div class="row">
-                         <div class="col l-4">
+                         <div class="col c-4">
                               <div class="image">
                                    <img src="https://file.hstatic.net/1000406564/article/blogs3_b00e56c4b26642d4a73222a4f9bc8111_large.jpg" alt="">
                               </div>
                          </div>
 
-                         <div class="col l-8">
+                         <div class="col c-8">
                               <div class="paragraph">
                                    <a class="a__baimoi-title" href="#">Apple có thể sớm tung ra siêu phẩm Iphone...</a>
                                    <a class="a-nhacungcap" href="#">TechHose</a>

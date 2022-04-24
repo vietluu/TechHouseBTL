@@ -240,11 +240,11 @@
                 </div>
 
                  
-                <div class="product-price c-10 l-10 m-12 mg-0 row" >
-                    <div id="paid" class='c-3 l-5 m-6'  runat="server">
+                <div class="product-price c-12 mg-0 row" >
+                    <div id="paid" class='c-6 m-7 text-center'  runat="server">
 
                     </div>
-                    <button type='button' id='btn_process' onclick='process()' class='cart-btn c-3 l-6 m-6'>Thêm vào giỏ</button>
+                    <button type='button' id='btn_process' onclick='process()' class='cart-btn c-6 m-5'>Thêm vào giỏ</button>
                 </div>
             </div>
 

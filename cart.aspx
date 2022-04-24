@@ -14,113 +14,114 @@
     <link rel="stylesheet" href="btl/css/reset.css">
     <link rel="stylesheet" href="btl/css/grid.css">
     <link rel="stylesheet" href="btl/css/all.min.css">
-    <script src="btl/js/script.js"></script>
+   
 </head>
 <body>
     <form id="cart" runat="server">
           <!-- header -->
-    <header>
+     <header>
         <!-- laptop and pc  -->
-            <div class="top-header">
-                <div class="top-header-container">
-                    <!-- mobile menu icon -->
-                    <div class="nav-menu">
-                        <div class="icon-menu">    
-                        </div>
+        <div class="top-header">
+            <div class="top-header-container">
+                <!-- mobile menu icon -->
+                <div class="nav-menu">
+                    <div class="icon-menu">
                     </div>
-                   
-                    <div class="mobile-menu">
-                        <div class="mobile-wrapper">
-                            <ul class="menu-mobile-ul">
-                                <li><a href="index.aspx">Trang chủ</a></li>
-                                <li><a href="productIphone.aspx">Sản Phẩm</a> 
-                                    <span class="dropdown"><i class="fas fa-arrow-circle-right" ></i></span>
-                                    <ul class="sub-mobile-menu">
-                                        <li><a href="#">iphone</a></li>
-                                        <li><a href="#">samsung</a></li>
-                                        <li><a href="#">xiaomi</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="productIphone.aspx">Product View</a> 
-                                    <span class="dropdown"><i class="fas fa-arrow-alt-circle-right"></i></span>
-                                    <ul class="sub-mobile-menu">
-                                        <li><a href="detailCart.aspx?id=1">iphone 13 pro max</a></li>
-                                        <li><a href="#">xiaomi 12 pro</a></li>
-                                        <li><a href="#">samsung galaxy s22</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="blog.aspx">Blog</a></li>
-                                <li><a href="gioithieu.aspx">Giới Thiệu</a></li>
-                                <li><a href="#">Liên Hệ</a></li>
-                                                              <%    
+                </div>
+
+                <div class="mobile-menu">
+                    <div class="mobile-wrapper">
+                        <ul class="menu-mobile-ul">
+                            <li><a href="index.aspx">Trang chủ</a></li>
+                            <li><a href="productIphone.aspx">Sản Phẩm</a>
+                                <span class="dropdown"><i class="fas fa-arrow-circle-right"></i></span>
+                                <ul class="sub-mobile-menu">
+                                    <li><a href="#">iphone</a></li>
+                                    <li><a href="#">samsung</a></li>
+                                    <li><a href="#">xiaomi</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="productIphone.aspx">Product View</a>
+                                <span class="dropdown"><i class="fas fa-arrow-alt-circle-right"></i></span>
+                                <ul class="sub-mobile-menu">
+                                    <li><a href="detailCart.aspx?id=1">iphone 13 pro max</a></li>
+                                    <li><a href="#">xiaomi 12 pro</a></li>
+                                    <li><a href="#">samsung galaxy s22</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="blog.aspx">Blog</a></li>
+                            <li><a href="gioithieu.aspx">Giới Thiệu</a></li>
+                            <li><a href="#">Liên Hệ</a></li>
+                              <%    
                         if (Session["name"] != null)
                         {
-                            Response.Write("<li><a href='signout.aspx'>Dang xuat</a></li>");
+                            Response.Write("<li><a href='signout.aspx'>Đăng xuất</a></li>");
 
                         }
                         %>
-                            </ul>
-                        </div> 
+                        </ul>
                     </div>
-                    <!-- pc header -->
-                    <div class="header-logo">
-                     <h1><a href="index.aspx">TechHouse</a></h1>
+                </div>
+                <!-- pc header -->
+                <div class="header-logo">
+                    <h1><a href="index.aspx">TechHouse</a></h1>
+                </div>
+                <div class="search-bar">
+                    <input id="search-input" type="text" placeholder="nhập tìm kiếm..." maxlength="100">
+                    <button type="button" onclick="search()"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-contact">
+                    <div class="header-hotline">
+                        <span>
+                            <i class="fas fa-phone fa-2x"></i>
+                        </span>
+                        <span>
+                            Hotline: <br />
+                            0963638362
+                          
+                        </span>
                     </div>
-                    <div class="search-bar">
-                        <input type="text" placeholder="nhập tìm kiếm..." maxlength="100">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                    <div class="header-contact">
-                        <div class="header-hotline">
-                            <span >
-                                <i class="fas fa-phone fa-2x"></i>
-                            </span>
-                            <span>
-                                Hotline: <br/>
-                                0963638362
-                            </span>
-                        </div>
-                        <div class="header-user">
-                              <%
-                               
+                    <div class="header-user">
+                           <%
+                              
                                if(Session["name"] != null)
                                {
-                                   Response.Write("<span>"+Session["name"]+"</span><span><a href='signout.aspx'>Dang xuat</a></span>");
-                                  // Response.Write(Session["name"]);
+                                   Response.Write("<span>"+Session["name"]+"</span><span><a href='signout.aspx'>Đăng xuất</a></span>");
+                                   // Response.Write(Session["name"]);
+
                                }
                                else
                                {
                                    Response.Write("<a href='./SignIn.aspx'><span><i class='fas fa-user fa-2x'></i></span> <span> Đăng Ký/ Đăng Nhập </span></a>");
                                }
                         %>
-                            
-                         </div>
-                         <div class="header-cart">
-                             <a href="cart.aspx">
-                             <span class="cart">
-                                 
+                    </div>
+                    <div class="header-cart">
+                        <a href="cart.aspx">
+                            <span class="cart">
+                                
                                     <i class="fa fa-cart-plus fa-2x"></i>
                                     <sup id="count" runat="server"><% Response.Write(Session["Count"].ToString()); %></sup>
-                                 
-                                
-                                 
-                             </span>
-                             <span>
-                                 Giỏ Hàng
-                         
-                             </span>
-                            </a>
-                         </div>
-                     </div>
-                        
+                               
+
+
+                            </span>
+                            <span>
+                                Giỏ Hàng
+
+                            </span>
+                        </a>
                     </div>
                 </div>
+
+            </div>
+        </div>
         <!-- tablet and mobile device search bar -->
         <div class="search-bar-mobile">
             <div class="searchbar-wraper">
-                <input type="text" placeholder="nhập tìm kiếm..." >
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>      
+                <input id="m-search-input" type="text" placeholder="nhập tìm kiếm..." maxlength="100">
+                    <button type="button" onclick="search()"><i class="fas fa-search"></i></button>
+            </div>
         </div>
 
         <!-- menu -->
@@ -128,16 +129,16 @@
             <div class="menu-wrapper">
                 <ul class="menu-ul">
                     <li><a href="index.aspx">Trang chủ</a></li>
-                    <li><a href="#">Sản Phẩm</a>
+                    <li><a href="productIphone.aspx">Sản Phẩm</a>
                         <ul class="sub-menu">
-                            <li><a href="#">iphone</a></li>
+                            <li><a href="productIphone.aspx">iphone</a></li>
                             <li><a href="#">samsung</a></li>
                             <li><a href="#">xiaomi</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Product View</a>
+                    <li><a href="productIphone.aspx">Product View</a>
                         <ul class="sub-menu">
-                            <li><a href="#">iphone 13 pro max</a></li>
+                            <li><a href="detailCart.aspx?id=1">iphone 13 pro max</a></li>
                             <li><a href="#">xiaomi 12 pro</a></li>
                             <li><a href="#">samsung galaxy s22</a></li>
                         </ul>
@@ -145,10 +146,12 @@
                     <li><a href="blog.aspx">Blog</a></li>
                     <li><a href="gioithieu.aspx">Giới Thiệu</a></li>
                     <li><a href="#">Liên Hệ</a></li>
+                  
                 </ul>
             </div>
         </div>
-       
+
+
     </header>
 
     <!-- body - cart -->
@@ -158,7 +161,7 @@
                 <h2>Giỏ hàng của bạn</h2>
             </div>
             <div class="cart_info">
-               <div class="c-8 l-12 m-12" >
+               <div class="c-8 l-9 m-12" >
                    <div class='list pd-3 c-10 l-12 m-12 col row' id="list_show" runat="server">
                     </div>
                      
@@ -282,5 +285,6 @@
             window.location.href = `cart.aspx?idRm=${id}&sizeRm=${size}&colorRm=${color}`;
         }
     </script>
+     <script src="btl/js/script.js"></script>
 </body>
 </html>

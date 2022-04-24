@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="btl/css/reset.css">
     <link rel="stylesheet" href="btl/css/grid.css">
     <link rel="stylesheet" href="btl/css/all.min.css">
-    <script src="btl/js/script.js?v=123"></script>
+
     <title>TechHouse</title>
 
-  
+
 </head>
 <body>
-   
-           <!-- Header -->
+
+    <!-- Header -->
     <header>
         <!-- laptop and pc  -->
         <div class="top-header">
@@ -55,13 +55,13 @@
                             <li><a href="blog.aspx">Blog</a></li>
                             <li><a href="gioithieu.aspx">Giới Thiệu</a></li>
                             <li><a href="#">Liên Hệ</a></li>
-                              <%    
-                        if (Session["name"] != null)
-                        {
-                            Response.Write("<li><a href='signout.aspx'>Đăng xuất</a></li>");
+                            <%    
+                                if (Session["name"] != null)
+                                {
+                                    Response.Write("<li><a href='signout.aspx'>Đăng xuất</a></li>");
 
-                        }
-                        %>
+                                }
+                            %>
                         </ul>
                     </div>
                 </div>
@@ -70,47 +70,46 @@
                     <h1><a href="index.aspx">TechHouse</a></h1>
                 </div>
                 <div class="search-bar">
-                    <input type="text" placeholder="nhập tìm kiếm..." maxlength="100" list="list">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+                    <input id="search-input" type="text" placeholder="nhập tìm kiếm..." maxlength="100">
+                    <button type="button" onclick="search()"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="header-contact">
                     <div class="header-hotline">
                         <span>
                             <i class="fas fa-phone fa-2x"></i>
                         </span>
-                        <span>
-                            Hotline: <br />
+                        <span>Hotline:
+                            <br />
                             0963638362
                           
                         </span>
                     </div>
                     <div class="header-user">
-                           <%
-                              
-                               if(Session["name"] != null)
-                               {
-                                   Response.Write("<span>"+Session["name"]+"</span><span><a href='signout.aspx'>Đăng xuất</a></span>");
-                                   // Response.Write(Session["name"]);
+                        <%
 
-                               }
-                               else
-                               {
-                                   Response.Write("<a href='./SignIn.aspx'><span><i class='fas fa-user fa-2x'></i></span> <span> Đăng Ký/ Đăng Nhập </span></a>");
-                               }
+                            if (Session["name"] != null)
+                            {
+                                Response.Write("<span>" + Session["name"] + "</span><span><a href='signout.aspx'>Đăng xuất</a></span>");
+                                // Response.Write(Session["name"]);
+
+                            }
+                            else
+                            {
+                                Response.Write("<a href='./SignIn.aspx'><span><i class='fas fa-user fa-2x'></i></span> <span> Đăng Ký/ Đăng Nhập </span></a>");
+                            }
                         %>
                     </div>
                     <div class="header-cart">
                         <a href="cart.aspx">
                             <span class="cart">
-                                
-                                    <i class="fa fa-cart-plus fa-2x"></i>
-                                    <sup id="count" runat="server"><% Response.Write(Session["Count"].ToString()); %></sup>
-                               
+
+                                <i class="fa fa-cart-plus fa-2x"></i>
+                                <sup id="count" runat="server"><% Response.Write(Session["Count"].ToString()); %></sup>
+
 
 
                             </span>
-                            <span>
-                                Giỏ Hàng
+                            <span>Giỏ Hàng
 
                             </span>
                         </a>
@@ -122,8 +121,8 @@
         <!-- tablet and mobile device search bar -->
         <div class="search-bar-mobile">
             <div class="searchbar-wraper">
-                <input type="text" placeholder="nhập tìm kiếm...">
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <input id="m-search-input" type="text" placeholder="nhập tìm kiếm..." maxlength="100">
+                <button type="button" onclick="search()"><i class="fas fa-search"></i></button>
             </div>
         </div>
 
@@ -149,7 +148,7 @@
                     <li><a href="blog.aspx">Blog</a></li>
                     <li><a href="gioithieu.aspx">Giới Thiệu</a></li>
                     <li><a href="#">Liên Hệ</a></li>
-                  
+
                 </ul>
             </div>
         </div>
@@ -159,25 +158,25 @@
 
             <div class="mySlides fade">
                 <a href="#">
-                    <img src="btl/images/banner/slideshow_1.jpg" style="width:100%">
+                    <img src="btl/images/banner/slideshow_1.jpg" style="width: 100%">
                 </a>
             </div>
 
             <div class="mySlides fade">
 
                 <a href="#">
-                    <img src="btl/images/banner/slideshow_2.jpg" style="width:100%">
+                    <img src="btl/images/banner/slideshow_2.jpg" style="width: 100%">
                 </a>
 
             </div>
             <div class="mySlides fade">
 
                 <a href="#">
-                    <img src="btl/images/banner/slideshow_3.jpg" style="width:100%">
+                    <img src="btl/images/banner/slideshow_3.jpg" style="width: 100%">
                 </a>
 
             </div>
-            <div class="dots" style="text-align:center">
+            <div class="dots" style="text-align: center">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
@@ -212,17 +211,14 @@
         <div class="product">
             <section class="news_product">
                 <div class="product_title">
-                    <h2>
-                        Sản phẩm mới
+                    <h2>Sản phẩm mới
                     </h2>
-                    <h4>
-                        Cập nhật những sản phẩm mới nhất
+                    <h4>Cập nhật những sản phẩm mới nhất
                     </h4>
                 </div>
 
 
-                <div class="device_product" id ="product_show" runat="server">
-                    
+                <div class="device_product" id="product_show" runat="server">
                 </div>
 
 
@@ -261,11 +257,9 @@
             <div class="product">
                 <section class="news_product">
                     <div class="product_title">
-                        <h2>
-                            Sản Phẩm Khuyễn mãi
+                        <h2>Sản Phẩm Khuyễn mãi
                         </h2>
-                        <h4>
-                            Giảm giá lên tới 50%
+                        <h4>Giảm giá lên tới 50%
                         </h4>
                     </div>
                     <div class="device_product_sale">
@@ -300,7 +294,7 @@
                                     Điện thoại Samsung s21 fe
                                 </p>
                                 <p class="mobile_paid">
-                                    25.900.000đ <s> 27.000.000đ</s>
+                                    25.900.000đ <s>27.000.000đ</s>
                                 </p>
                             </div>
 
@@ -422,10 +416,12 @@
             <div class="row text-left">
                 <!-- footer content 1 -->
                 <div class="col c-4 m-12 pd-3 footer__content1">
-                    <h4 class="pd-3 text-main"> Giới thiệu</h4>
+                    <h4 class="pd-3 text-main">Giới thiệu</h4>
                     <div class="pd-1 text-center ">
-                        <p class="pd-1 ">Trang mua sắm trực tuyến của thương hiệu Apple ,phụ kiện, giúp bạn tiếp cận xu
-                            hướng công nghệ mới nhất.</p>
+                        <p class="pd-1 ">
+                            Trang mua sắm trực tuyến của thương hiệu Apple ,phụ kiện, giúp bạn tiếp cận xu
+                            hướng công nghệ mới nhất.
+                        </p>
                         <img class="pd-1 c-5" src="./btl/Image/logo_bocongthuong.png" alt="">
                     </div>
                 </div>
@@ -435,11 +431,11 @@
                     <h4 class="pd-1 text-main">Liên kết</h4>
 
                     <ul class="mg-auto  pd-1">
-                        <li class="pd-1"><a href="#"> <i class="fas fa-arrow-right"></i> Tìm Kiếm</a></li>
-                        <li class="pd-1"><a href="#"> <i class="fas fa-arrow-right"></i> Chính sách đổi trả</a></li>
-                        <li class="pd-1"><a href="#"> <i class="fas fa-arrow-right"></i> Chính sách bảo mật</a></li>
-                        <li class="pd-1"><a href="#"> <i class="fas fa-arrow-right"></i> Tìm Kiếm</a></li>
-                        <li class="pd-1"><a href="#"> <i class="fas fa-arrow-right"></i> Điều khoản dịch vụ</a></li>
+                        <li class="pd-1"><a href="#"><i class="fas fa-arrow-right"></i>Tìm Kiếm</a></li>
+                        <li class="pd-1"><a href="#"><i class="fas fa-arrow-right"></i>Chính sách đổi trả</a></li>
+                        <li class="pd-1"><a href="#"><i class="fas fa-arrow-right"></i>Chính sách bảo mật</a></li>
+                        <li class="pd-1"><a href="#"><i class="fas fa-arrow-right"></i>Tìm Kiếm</a></li>
+                        <li class="pd-1"><a href="#"><i class="fas fa-arrow-right"></i>Điều khoản dịch vụ</a></li>
                     </ul>
 
                 </div>
@@ -473,5 +469,6 @@
     </footer>
 
 </body>
-     <script src="btl/js/SlideImage.js"></script>
+<script src="btl/js/script.js"></script>
+<script src="btl/js/SlideImage.js"></script>
 </html>

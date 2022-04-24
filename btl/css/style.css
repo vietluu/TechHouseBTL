@@ -1021,6 +1021,7 @@ header .dropdown-menu .menu-wrapper .menu-ul li .sub-menu li {
   display: -ms-flexbox;
   display: flex;
   padding: 20px;
+ 
   text-align: left;
 }
 
@@ -1150,5 +1151,5 @@ header .dropdown-menu .menu-wrapper .menu-ul li .sub-menu li {
         border: none;
         font-size: 40px;
         transform: rotate(45deg);
-    }
+    
 }

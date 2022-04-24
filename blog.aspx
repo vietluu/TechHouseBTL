@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="btl/css/all.min.css">
     <link rel="stylesheet" href="btl/css/blog.css">
     <title>Blog</title>
-    <script src="btl/js/script.js?v=123"></script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
         <!-- Header -->
-     <header>
+ <header>
           <!-- laptop and pc  -->
               <div class="top-header">
                   <div class="top-header-container">
@@ -361,4 +361,5 @@
      </footer>
     </form>
 </body>
+    <script src="btl/js/script.js?v=123"></script>
 </html>

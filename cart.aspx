@@ -159,8 +159,8 @@
             </div>
             <div class="cart_info">
                <div class="c-8 m-12" >
-                   <div class='list c-9 l-10 m-12 col row' id="list_show" runat="server">
-                       </div>
+                   <div class='list pd-3 c-10 l-10 m-12 col row' id="list_show" runat="server">
+                    </div>
                      
                 </div>
                 <div class="paid">
@@ -278,8 +278,8 @@
    </footer>
     </form>
     <script>
-        function removeProduct(value) {
-            window.location.href = `cart.aspx?idrm=${value}`;
+        function removeProduct(id, size, color) {
+            window.location.href = `cart.aspx?idRm=${id}&sizeRm=${size}&colorRm=${color}`;
         }
     </script>
 </body>

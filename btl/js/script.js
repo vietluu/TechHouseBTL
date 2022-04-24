@@ -40,8 +40,8 @@
 
 
    
-    function removeProduct(value) {
-        window.location.href = `cart.aspx?idrm=${value}`;
+    function removeProduct(id,size,color) {
+        window.location.href = `cart.aspx?idRm=${id}&sizeRm=${size}&colorRm=${color}`;
     }
 }
 

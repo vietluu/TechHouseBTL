@@ -16,9 +16,7 @@ namespace TechHouseBTL
             Listuser.Add(new User("viet@gmail.com", "viet", "1234567"));
             Listuser.Add(new User("sang@gmail.com", "sang", "1234567"));
             Application["user"] = Listuser;
-
-
-
+            // khoi tao du lieu san pham
             Application["sanpham"] = new List<Product>();
             List<Product> listsp = (List<Product>)Application["sanpham"];
             listsp.Add(new Product("Iphone 13 Pro Max", "1", "btl/images/sp/iphone/ip13-pro_2.jpg", 10000000, 5));

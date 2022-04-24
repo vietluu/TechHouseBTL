@@ -20,14 +20,15 @@ namespace TechHouseBTL
                 if (x.UserID == (string)Session["email"])
                 {
 
-                    i++;
-                    list += "<div class='c-12 item_paid row'>";
+                    i+=x.Sl;
+                    list += "<div class='c-11 pd-3 item_paid row'>";
                     list += "<div class='item_img c-5'>";
                     list += "<img src = '" + x.Imgsp + "' alt=''></div>";
 
                     list += " <div class='item_right c-7'>";
-                    list += "<p class='mobile_name'>" + x.NameID1 + "</p><p>màu: " + x.Color1 + "</p> <P>Bộ nhớ: " + x.Size + "GB</P> ";
-                    list += " <p class='mobile_paid'>giá " + string.Format("{0:0,0đ}", x.Gia) + "</p></div>" + "<span class='close-icon'><input type='button' name='remover' onClick='removeProduct("+x.ProductID1 +")' value='+'></span></div>";
+                    list += "<p class='mobile_name'>" + x.NameID1 + "</p><p>màu: " + x.Color1 + "</p> <P>Bộ nhớ: " + x.Size + "GB</P><p>Số lượng: "+x.Sl+"</p>";
+                    
+                    list += " <p class='mobile_paid'>giá " + string.Format("{0:0,0đ}", x.Gia) + "</p></div>" + "<span class='close-icon'><input type='button' name='remover' onClick='removeProduct("+x.ProductID1 +","+x.Size+",`"+x.Color1+"`)' value='+'></span></div>";
                     sum += x.Gia;
                     check = false;
 
@@ -38,11 +39,11 @@ namespace TechHouseBTL
             Session["count"] = i;
             foreach (Oder y in listsp)
             {
-                if(y.ProductID1 == Request.QueryString["idrm"] && y.UserID == (string)Session["email"])
+                if(y.ProductID1 == Request.QueryString["idRm"] && y.UserID == (string)Session["email"] && y.Size == Request.QueryString["sizeRm"] && y.Color1 == Request.QueryString["colorRm"])
                 {
                     
                      listsp.Remove(y);
-                     
+                    Application["oder"] = listsp;
                      Response.Redirect(Request.RawUrl);
 
                 }

@@ -158,8 +158,8 @@
                 <h2>Giỏ hàng của bạn</h2>
             </div>
             <div class="cart_info">
-               <div class="c-8 m-12" >
-                   <div class='list pd-3 c-10 l-10 m-12 col row' id="list_show" runat="server">
+               <div class="c-8 l-12 m-12" >
+                   <div class='list pd-3 c-10 l-12 m-12 col row' id="list_show" runat="server">
                     </div>
                      
                 </div>

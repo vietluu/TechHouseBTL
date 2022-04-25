@@ -9,16 +9,19 @@
         string Color;
         string size;
         int gia;
+        int sl;
 
-        public Oder(string userID, string nameID, string productID, string imgsp, string color, string size, int gia)
+       
+        public Oder(string userID, string nameID, string productID, string imgsp, string color, string size, int gia, int sl)
         {
-            this.UserID = userID;
-            NameID1 = nameID;
-            ProductID1 = productID;
-            this.Imgsp = imgsp;
-            Color1 = color;
-            this.Size = size;
-            this.Gia = gia;
+            this.userID = userID;
+            NameID = nameID;
+            ProductID = productID;
+            this.imgsp = imgsp;
+            Color = color;
+            this.size = size;
+            this.gia = gia;
+            this.Sl = sl;
         }
 
         public string UserID { get => userID; set => userID = value; }
@@ -28,5 +31,6 @@
         public string Color1 { get => Color; set => Color = value; }
         public string Size { get => size; set => size = value; }
         public int Gia { get => gia; set => gia = value; }
+        public int Sl { get => sl; set => sl = value; }
     }
 }

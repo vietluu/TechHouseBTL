@@ -1,21 +1,24 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gioithieu.aspx.cs" Inherits="TechHouseBTL.gioithieu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Search.aspx.cs" Inherits="TechHouseBTL.Search" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
-    <title>Giới Thiệu</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
     <link rel="shortcut icon" type="image/x-icon" href="btl/Image/smart-house.png" />
     <link rel="stylesheet" href="btl/css/style.css" />
-    <link rel="stylesheet" href="btl/css/responsive.css" />
-    <link rel="stylesheet" href="btl/css/reset.css" />
-    <link rel="stylesheet" href="btl/css/grid.css" />
-    <link rel="stylesheet" href="btl/css/all.min.css" />
-    <link rel="stylesheet" href="btl/css/gioithieu.css" />
+    <link rel="stylesheet" href="btl/css/responsive.css">
+    <link rel="stylesheet" href="btl/css/reset.css">
+    <link rel="stylesheet" href="btl/css/grid.css">
+    <link rel="stylesheet" href="btl/css/all.min.css">
+    <script src="btl/js/script.js"></script>
 </head>
 <body>
-    <form id="gioithieu" runat="server">
-        <!-- Header -->
+    <form id="cart" runat="server">
+        <!-- header -->
         <header>
             <!-- laptop and pc  -->
             <div class="top-header">
@@ -64,7 +67,7 @@
                         <h1><a href="index.aspx">TechHouse</a></h1>
                     </div>
                     <div class="search-bar">
-                        <input id="search-input" type="text" placeholder="nhập tìm kiếm..." maxlength="100" />
+                        <input id="search-input" type="text" placeholder="nhập tìm kiếm..." maxlength="100">
                         <button type="button" onclick="search()"><i class="fas fa-search"></i></button>
                     </div>
                     <div class="header-contact">
@@ -115,7 +118,7 @@
             <!-- tablet and mobile device search bar -->
             <div class="search-bar-mobile">
                 <div class="searchbar-wraper">
-                    <input id="m-search-input" type="text" placeholder="nhập tìm kiếm..." maxlength="100" />
+                    <input id="m-search-input" type="text" placeholder="nhập tìm kiếm..." maxlength="100">
                     <button type="button" onclick="search()"><i class="fas fa-search"></i></button>
                 </div>
             </div>
@@ -150,130 +153,17 @@
 
         </header>
 
-        <!-- Gioi thieu -->
-        <div class="introduce">
-            <h1>Về Chúng Tôi</h1>
-            <p style="text-align: center; color: black;">
-                Chúng tôi là những sinh viên đến từ đại học Mở Hà Nội
-            </p>
-
-            <div class="row">
-
-                <!-- Sang Pham -->
-                <div class="card">
-                    <div class="card__img">
-                        <img src="./btl/Image/Mem1_Sang.jpg" alt="" />
-                    </div>
-
-                    <h2>Sang Phạm</h2>
-                    <p>Deverloper</p>
-
-                    <div class="card__social">
-                        <a target="_blank" href="https://www.facebook.com/besann43/">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-
-                    <button>Contact Me</button>
-                </div>
-
-                <!-- Việt -->
-                <div class="card">
-                    <div class="card__img">
-                        <img src="./btl/Image/Mem2_Việt.jpg" alt="" />
-                    </div>
-
-                    <h2>Việt Lưu</h2>
-                    <p>Deverloper</p>
-
-                    <div class="card__social">
-                        <a target="_blank" href="https://www.facebook.com/viet.luu.5876">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <button>Contact Me</button>
-                </div>
-
-                <!-- Tranhh Trần -->
-                <div class="card">
-                    <div class="card__img">
-                        <img src="./btl/Image/Mem3_TranAnh.jpg" alt="" />
-                    </div>
-
-                    <h2>Tranhh Trần</h2>
-                    <p>Deverloper</p>
-
-                    <div class="card__social">
-                        <a target="_blank" href="https://www.facebook.com/TranhRabbit111">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-
-                    <button>Contact Me</button>
-                </div>
-
-                <!-- Đức Ngọc -->
-                <div class="card">
-                    <div class="card__img">
-                        <img src="./btl/Image/Mem4_Ngọc.jpg" alt="" />
-                    </div>
-
-                    <h2>Đức Ngọc</h2>
-                    <p>Deverloper</p>
-
-                    <div class="card__social">
-                        <a target="_blank" href="https://www.facebook.com/ducngoc0506">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-
-                    <button>Contact Me</button>
-                </div>
+        <div class="search-container">
+            <h1 id="result" runat="server"></h1>
+            <div class="device_product" id="product_show" runat="server">
             </div>
         </div>
-
         <!-- footer -->
         <footer>
             <div class="row delivery">
                 <div class="delivery_content col c-4 m-12">
                     <div class="delivery_content-img mg-0 pd-3">
-                        <img src="btl/Image/policy_icon_1.png" alt="" />
+                        <img src="btl/Image/policy_icon_1.png" alt="">
                     </div>
 
                     <div class="delivery_content-tilte ">
@@ -284,7 +174,7 @@
                 </div>
                 <div class="delivery_content col c-4 m-12">
                     <div class="delivery_content-img mg-0 pd-3 ">
-                        <img src="btl/Image/policy_icon_2.png" alt="" />
+                        <img src="btl/Image/policy_icon_2.png" alt="">
                     </div>
 
                     <div class="delivery_content-tilte">
@@ -294,7 +184,7 @@
                 </div>
                 <div class="delivery_content col c-4 m-12">
                     <div class="delivery_content-img mg-0 pd-3 ">
-                        <img src="btl/Image/policy_icon_3.png" alt="" />
+                        <img src="btl/Image/policy_icon_3.png" alt="">
                     </div>
 
                     <div class="delivery_content-tilte">
@@ -310,7 +200,7 @@
                         <h4 class="pd-3 text-main">Giới thiệu</h4>
                         <div class="pd-1 ">
                             <p class="pd-1 ">Trang mua sắm trực tuyến của thương hiệu Apple ,phụ kiện, giúp bạn tiếp cận xu hướng công nghệ mới nhất.</p>
-                            <img class="pd-1 c-5" src="btl/Image/logo_bocongthuong.png" alt="" />
+                            <img class="pd-1 c-5" src="btl/Image/logo_bocongthuong.png" alt="">
                         </div>
                     </div>
 
@@ -355,6 +245,6 @@
             </div>
         </footer>
     </form>
+
 </body>
-<script src="btl/js/script.js"></script>
 </html>

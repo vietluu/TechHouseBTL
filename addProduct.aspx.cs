@@ -25,7 +25,15 @@ namespace TechHouseBTL
 
                     if (ext == ".jpg" || ext == ".png")
                     {
-                        img.SaveAs(filename);
+                        if (File.Exists(filename))
+                            {
+                            Response.Write("file da ton tai");
+                            return;
+                        }
+                        else
+                        {
+                            img.SaveAs(filename);
+                        }
                     }
                     else
                     {
@@ -36,9 +44,17 @@ namespace TechHouseBTL
               //  Application["sanpham"] = new List<Product>();
                 List<Product> listsp = (List<Product>)Application["sanpham"];
                 string id = (listsp.Count + 1).ToString();
-                Product prc = new Product(name,id , "btl/images/" + img.FileName, gia, sale);
-                listsp.Add(prc);
-                Application["sanpham"] = listsp;
+                if(img.FileName == null)
+                {
+                    return;
+                }
+                else
+                {
+                    Product prc = new Product(name, id, "btl/images/" + img.FileName, gia, sale);
+                    listsp.Add(prc);
+                    Application["sanpham"] = listsp;
+                }
+              
 
 
             }

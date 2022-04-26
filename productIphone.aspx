@@ -161,10 +161,19 @@
         <div class="fluid_container">
 
             <div class="filter">
-                <ul class ="filter_list" style ="display:flex">
-                    <li class ="filter_item"><input type ="submit" name ="filter0" id ="filter0" value ="Tất cả"/>
-                    </li>
-                </ul>
+                <select id="paidSelect" onchange="ok(this)" name="paidSelect" class ="filter_list">
+                    <option disabled selected>chon gia</option>
+                    <option value="1">5.000.000 - 10.000.000</option>
+                    <option value="2">10.000.000 - 20.000.000</option>
+                   
+                </select>
+                <script>
+                    const ok = (taget) => {
+
+                        window.location.href = `productIphone.aspx?paid=${taget.value}`;
+                    }
+                    
+                </script>
             </div>
 
 

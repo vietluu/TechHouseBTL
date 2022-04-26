@@ -66,6 +66,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addProduct.aspx" />
     <Content Include="blog.aspx" />
     <Content Include="btl\css\all.min.css" />
     <Content Include="btl\css\blog.css" />
@@ -98,6 +99,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addProduct.aspx.cs">
+      <DependentUpon>addProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addProduct.aspx.designer.cs">
+      <DependentUpon>addProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="blog.aspx.cs">
       <DependentUpon>blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

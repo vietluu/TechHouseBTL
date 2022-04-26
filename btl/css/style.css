@@ -636,8 +636,9 @@ header .dropdown-menu .menu-wrapper .menu-ul li .sub-menu li {
 }
 
 .mobile_info img {
-  max-width: 100%;
-  margin-bottom: 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    aspect-ratio: 10/10.4
 }
 
 .mobile_info p {

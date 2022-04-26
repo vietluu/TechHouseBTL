@@ -20,7 +20,7 @@ namespace TechHouseBTL
             String show = "";
             foreach (Product x in list)
             {
-               if(x.Namesp == value)
+                if (x.Namesp.Contains(value))
                 {
                     check = false;
                     string gia = "";
@@ -34,7 +34,6 @@ namespace TechHouseBTL
                     string s = (x.Sale > 0) ? (saleoff = "<span class='sale'>-" + x.Sale + "%</span>") : (saleoff = "");
                     show += "<p class='mobile_paid'>" + v + "đ<s>" + y + "</s></p> " + s + "</a>";
                 }
-
             }
             if (check)
             {
@@ -45,7 +44,6 @@ namespace TechHouseBTL
             {
                 product_show.InnerHtml = show;
             }
-            
         }
     }
 }

@@ -131,16 +131,16 @@
                     <li><a href="index.aspx">Trang chủ</a></li>
                     <li><a href="productIphone.aspx">Sản Phẩm</a>
                         <ul class="sub-menu">
-                            <li><a href="productIphone.aspx">iphone</a></li>
-                            <li><a href="#">samsung</a></li>
-                            <li><a href="#">xiaomi</a></li>
+                            <li><a href="productIphone.aspx">IPhone</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">Xiaomi</a></li>
                         </ul>
                     </li>
                     <li><a href="productIphone.aspx">Product View</a>
                         <ul class="sub-menu">
-                            <li><a href="detailCart.aspx?id=1">iphone 13 pro max</a></li>
-                            <li><a href="#">xiaomi 12 pro</a></li>
-                            <li><a href="#">samsung galaxy s22</a></li>
+                            <li><a href="detailCart.aspx?id=1">IPhone 13 Pro Max</a></li>
+                            <li><a href="#">Xiaomi 12 Pro</a></li>
+                            <li><a href="#">Samsung Galaxy S22</a></li>
                         </ul>
                     </li>
                     <li><a href="blog.aspx">Blog</a></li>
@@ -183,9 +183,7 @@
                             <div class="paid_submit">
                               <button type="submit">Thanh toán</button>
                               <p><a href="index.aspx">Tiếp tục mua hàng</a></p>
-                            </div>
-                            
-                            
+                            </div>    
                         </div>
                     </div>
                 </div>

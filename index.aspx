@@ -39,17 +39,17 @@
                             <li><a href="productIphone.aspx">Sản Phẩm</a>
                                 <span class="dropdown"><i class="fas fa-arrow-circle-right"></i></span>
                                 <ul class="sub-mobile-menu">
-                                    <li><a href="#">iphone</a></li>
-                                    <li><a href="#">samsung</a></li>
-                                    <li><a href="#">xiaomi</a></li>
+                                    <li><a href="#">IPhone</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi</a></li>
                                 </ul>
                             </li>
                             <li><a href="productIphone.aspx">Product View</a>
                                 <span class="dropdown"><i class="fas fa-arrow-alt-circle-right"></i></span>
                                 <ul class="sub-mobile-menu">
-                                    <li><a href="detailCart.aspx?id=1">iphone 13 pro max</a></li>
-                                    <li><a href="#">xiaomi 12 pro</a></li>
-                                    <li><a href="#">samsung galaxy s22</a></li>
+                                    <li><a href="detailCart.aspx?id=1">Iphone 13 Pro Max</a></li>
+                                    <li><a href="#">Xiaomi 12 Pro</a></li>
+                                    <li><a href="#">Samsung Galaxy S22</a></li>
                                 </ul>
                             </li>
                             <li><a href="blog.aspx">Blog</a></li>

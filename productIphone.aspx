@@ -39,9 +39,9 @@
                                 <li><a href="productIphone.aspx">Sản Phẩm</a>
                                     <span class="dropdown"><i class="fas fa-arrow-circle-right"></i></span>
                                     <ul class="sub-mobile-menu">
-                                        <li><a href="#">iphone</a></li>
-                                        <li><a href="#">samsung</a></li>
-                                        <li><a href="#">xiaomi</a></li>
+                                        <li><a href="#">IPhone</a></li>
+                                        <li><a href="#">Samsung</a></li>
+                                        <li><a href="#">Xiaomi</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="productIphone.aspx">Product View</a>
@@ -161,15 +161,10 @@
         <div class="fluid_container">
 
             <div class="filter">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-sliders"></i>Bộ lọc
-                        </a>
+                <ul class ="filter_list" style ="display:flex">
+                    <li class ="filter_item"><input type ="submit" name ="filter0" id ="filter0" value ="Tất cả"/>
                     </li>
                 </ul>
-
-
             </div>
 
 
@@ -256,8 +251,6 @@
                         </ul>
 
                     </div>
-
-
                 </div>
             </div>
             <div class="copyright">

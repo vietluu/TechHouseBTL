@@ -37,17 +37,10 @@
             }
         });
     }
-
-
-
-  
 }
 function search() {
     const value = document.querySelector('#search-input').value;
     const valuem = document.querySelector('#m-search-input').value;
-    
     window.location.href = `Search.aspx?product=${(window.innerWidth > 1200) ? value : valuem}`;
-    
-   
 }
 

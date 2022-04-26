@@ -36,7 +36,7 @@
 		    </div>
 
 		    <div class="error" id="loginerr" runat="server"></div>
-		    <button type="submit">Sign Up</button>
+		    <button type="submit">Sign In</button>
 		 </form>
 		    
 		

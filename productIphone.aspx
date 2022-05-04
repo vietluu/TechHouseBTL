@@ -17,7 +17,17 @@
     <link rel="stylesheet" href="btl/css/productIphone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+            .mobile_info {
+      width: 23%;
+      border: 1px solid #ddd8d8;
+      background-color: #fff;
+      margin: 10px 10px 30px 10px;
+      position: relative;
 
+    }
+
+    </style>
     
 </head>
 <body>
@@ -92,6 +102,11 @@
                                     Response.Write("<span>" + Session["name"] + "</span><span><a href='signout.aspx'>Đăng xuất</a></span>");
                                     // Response.Write(Session["name"]);
 
+                                     ////thời gian khi user đăng nhập
+                                    //Session["datetime"] = DateTime.Now;
+
+                                    //Response.Write("<div>Thời gian khi đăng nhập: " + Session["datetime"] + "</div>");
+
                                 }
                                 else
                                 {
@@ -161,24 +176,50 @@
         <div class="fluid_container">
 
             <div class="filter">
-                <select id="paidSelect" onchange="ok(this)" name="paidSelect" class ="filter_list">
-                    <option disabled selected>chon gia</option>
+               <%-- <select id="paidSelect" onchange="ok(this)" name="paidSelect" class ="filter_list">
+                    <option disabled selected>Chọn giá</option>
                     <option value="1">5.000.000 - 10.000.000</option>
                     <option value="2">10.000.000 - 20.000.000</option>
                    
                 </select>
                 <script>
-                    const ok = (taget) => {
-
-                        window.location.href = `productIphone.aspx?paid=${taget.value}`;
+                    const ok = (taget) => { taget.value
+                        window.location.href = `productIphone.aspx?paid=${}`;
                     }
                     
-                </script>
+                </script>--%>
+
+               <ul>
+                    <li>
+                         <a href="#">
+                              <i class="fa-solid fa-sliders"></i>Bộ lọc
+                         </a>
+                    </li>
+               </ul>
+
+              <%--  <div class="lockhoang">
+        
+                    <div class="filter" runat="server">
+                       
+                        <ul class="filter__list" style="display:flex;">
+                            <li class="filter__item"><input type="submit" name="filter04" id="filter04" value="Tất cả" /></li>
+                            <li class="filter__item"><input type="submit" name="filter01" id="filter01" value="<10000000đ"/></li>
+                            <li class="filter__item"><input type="submit" name="filter02" id="filter02" value="10000000đ-15000000đ"/></li>
+                            <li class="filter__item"><input type="submit" name="filter03" id="filter03" value=">15000000đ" /></li>
+                        </ul>
+                    </div>
+          
+               </div>--%>
+
+
+
+
+
             </div>
 
 
             <div class="product">
-                <div class="device_product" id="product_show" runat="server">
+                <div class="device_product" style="margin-top: 55px;" id="product_show" runat="server">
                 </div>
             </div>
         </div>
@@ -266,6 +307,7 @@
                 <span style="color: rgb(141, 141, 141);">copyright &copy 2022 - design by VNSA</span>
             </div>
         </footer>
+
     </form>
 </body>
     <script src="btl/js/script.js"></script>

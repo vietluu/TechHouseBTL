@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Search.aspx.cs" Inherits="TechHouseBTL.Search" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Search.aspx.cs" Inherits="TechHouseBTL.Search" %>
 
 <!DOCTYPE html>
 
@@ -247,4 +247,4 @@
     </form>
 
 </body>
-</html>
+</html>--%>

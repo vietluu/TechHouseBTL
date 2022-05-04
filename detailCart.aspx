@@ -235,6 +235,17 @@
                             <label for="256gb" ><span>256GB </span></label>
                             <input type="radio" id="512gb" name="size" value="512">
                             <label for="512gb"><span>512Gb</span></label>
+                            
+                        </div>
+                    </div>
+
+                    <%-- so luong --%>
+                    <div class="cable-config">
+                        <span>Số Lượng</span>
+
+                        <div class="cable-choose">
+                            <input type="text" name="soluong" id ="soluong"  value="">
+                            <span id="checkError" style="color: red;"> </span>
                         </div>
                     </div>
                 </div>
@@ -244,7 +255,7 @@
                     <div id="paid" class='c-6 m-7 text-center'  runat="server">
 
                     </div>
-                    <button type='button' id='btn_process' onclick='process()' class='cart-btn c-6 m-5'>Thêm vào giỏ</button>
+                    <button type='button' id='btn_process' onclick=' return process()' class='cart-btn c-6 m-5'>Thêm vào giỏ</button>
                 </div>
             </div>
 
@@ -343,6 +354,10 @@
     </form>
     <script src="/btl/js/slideShowDetailProduct.js"></script>
      <script src="btl/js/script.js?v=123"></script>
+    <script>
+        
+
+    </script>
 
 </body>
 </html>

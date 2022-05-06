@@ -17,7 +17,7 @@
     <title>Đăng Nhập</title>
 </head>
 <body>
-   <div class="container__form">
+   <div class="container__form c-5 l-8 m-11">
 		
   
 		  

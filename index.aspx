@@ -21,6 +21,10 @@
 </head>
 <body>
 
+    <%--<div>
+        <a href="hien.aspx">Hello my phen</a>
+    </div>--%>
+
     <!-- Header -->
     <header>
         <!-- laptop and pc  -->
@@ -91,6 +95,11 @@
                             {
                                 Response.Write("<span>" + Session["name"] + "</span><span><a href='signout.aspx'>Đăng xuất</a></span>");
                                 // Response.Write(Session["name"]);
+
+                                ////thời gian khi user đăng nhập
+                                //Session["datetime"] = DateTime.Now;
+
+                                //Response.Write("<div>Thời gian khi đăng nhập: " + Session["datetime"] + "</div>");
 
                             }
                             else

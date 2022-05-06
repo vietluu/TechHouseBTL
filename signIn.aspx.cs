@@ -30,8 +30,17 @@ namespace TechHouseBTL
                         // Response.Write(a.Email + a.Pwd);
                         if (email == a.Email && pass == a.Pwd)
                         {
+                            Session["dangnhap"] = 1;
                             Session["name"] = a.Name;
                             Session["email"] = a.Email;
+
+                            //Khởi tạo application kiểm tra thời gian chạy của user
+                            Application["tk"] = a.Email;
+                            Session["hoten"] = a.Name;
+                            Session["pass"] = a.Pwd;
+                            Response.Redirect("index.aspx");
+
+
                             List<Oder> listsp = new List<Oder>();
                             listsp = (List<Oder>)Application["oder"];
                             int i = 0;
@@ -52,8 +61,33 @@ namespace TechHouseBTL
                             Response.Redirect("index.aspx");
 
                         }
+
+                        // kiem tra 3 lan dang nhap sai, neu sai thi ko cho dang nhap nua
+                        else if(a.Email == email && a.Pwd != pass)
+                        {
+                            if (Session["dem"] == null)
+                            {
+                                Session["dem"] = 1;
+                            }
+                            else
+                            {
+                                Session["dem"] = (int)Session["dem"] + 1;
+                            }
+
+                            if ((int)Session["dem"] >= 3)
+                            {
+                                Session["dem"] = null;
+                                dn.Visible = false;
+                                loginerr.InnerHtml = "Bạn đăng nhập sai 3 lần bị khóa";
+                            }
+
+                            else
+                            {
+                                loginerr.InnerHtml = "Bạn đăng nhập sai lần thứ: " + Session["dem"];
+                            }
+                        }
                     }
-                    loginerr.InnerHtml = "tai khoan hoac mat khau khong chinh xac";
+                    loginerr.InnerHtml = "Tài khoản hoặc Mật Khẩu không chính xác!";
 
                 }
             }

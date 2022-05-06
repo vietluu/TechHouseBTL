@@ -557,15 +557,6 @@ header .dropdown-menu .menu-wrapper .menu-ul li .sub-menu li {
 
 }
 
-.mobile_info {
-  width: 20%;
-  margin: 0;
-  border: 1px solid #ddd8d8;
-  background-color: #fff;
-  padding: 10px 10px 30px 10px;
-  position: relative;
-
-}
 
 .mobile_info:hover::after {
   display: block;

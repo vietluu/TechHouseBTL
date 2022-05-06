@@ -9,5 +9,33 @@
     color: dimgray;
     height: 27px;
     text-align: center;
-   
+    border: 1px solid rgba(134, 134, 134, 0.267);
+}
+
+
+/* Loc*/
+.lockhoang {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter {
+    font-size: 1.4rem;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.filter__list li {
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+.filter__list li input {
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }

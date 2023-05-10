@@ -19,7 +19,7 @@ namespace TechHouseBTL
                 {
                     if (x.Email == email)
                     {
-                        signun_err.InnerText = "tài khoản đã tồn tại";
+                        signun_err.InnerText = "Tài Khoản đã tồn tại!";
 
                         check = true;
 

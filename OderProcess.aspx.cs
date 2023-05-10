@@ -16,8 +16,8 @@ namespace TechHouseBTL
             if (id == "" || name == "" || img == "" || paid == "" || size == "" || color == "")
             {
                 Response.Redirect("index.aspx");
-            }
-            paid = paid.Replace(".", "");
+            } 
+            paid = paid.Replace(",", "");
             int numpaid = int.Parse(paid);
            
             string user = (string)Session["email"];

@@ -25,10 +25,40 @@ function process() {
     const c = document.querySelector('.color-choose input:checked').value;
     const d = document.querySelector('.cable-choose input:checked').value;
     const f = document.getElementById('money').innerText;
+    var checkLoi = true;
+
+    var soLuong = document.getElementById("soluong").value;
+    var checkError = document.getElementById("checkError");
+
+    if (soLuong == "") {
+        checkError.innerHTML = "Khong dc de trong";
+        checkLoi = false;
+
+    } else {
+        checkError.innerHTML = "OK";
+        for (var i = 0; i < soLuong.length; i++) {
+            if (isNaN(soLuong.charAt(i))) {
+                checkError.innerHTML = "So luong không chứa chữ cái";
+                checkloi = false;
+            }
+        }
+        
+        if (soLuong.length >= 5) {
+            checkError.innerHTML = "So luong khong qua 5 so!";
+            checkloi = false;
+        }
+    }
    
-    window.location.href = `OderProcess.aspx?id=${g}&name=${b}&img=${a}&color=${c}&size=${d}&paid=${f}`;
+    //window.location.href = `OderProcess.aspx?id=${g}&name=${b}&img=${a}&color=${c}&size=${d}&paid=${f}`;
+
+    
 
 }
+
+
+
+
+
 listImages.forEach((imgElement, index) => {
 
     imgElement.addEventListener('click', e => {

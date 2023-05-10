@@ -8,8 +8,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+        <%--<div>
+             <p id="dx" runat="server"> Thời gian đã sử dụng: </p>
+             <a href="index.aspx"> Trở về trang chủ</a>
+        </div>--%>
     </form>
 </body>
 </html>

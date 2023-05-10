@@ -183,7 +183,12 @@
                             <div class="paid_submit">
                               <button type="submit">Thanh toán</button>
                               <p><a href="index.aspx">Tiếp tục mua hàng</a></p>
-                            </div>    
+                            </div> 
+                            
+                            <div>
+                                <h2><a href="HienUservaThanhToan.aspx">Hien</a></h2>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>

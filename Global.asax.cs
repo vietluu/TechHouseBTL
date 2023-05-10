@@ -17,6 +17,8 @@ namespace TechHouseBTL
             Listuser.Add(new User("sang@gmail.com", "Sang", "1234567"));
             Listuser.Add(new User("ngoc@gmail.com", "Ngọc", "141201"));
             Application["user"] = Listuser;
+
+
             // khoi tao du lieu san pham
             Application["sanpham"] = new List<Product>();
             List<Product> listsp = (List<Product>)Application["sanpham"];
@@ -30,6 +32,9 @@ namespace TechHouseBTL
             listsp.Add(new Product("Samsung Galaxy Tab S7", "8", "btl/images/sp/samsung/samsung-galaxy-tab-s7-1.jpg", 18000000, 4));
             listsp.Add(new Product("Iphone 12 Pro Max", "9", "btl/images/sp/iphone/iphone_12_pro_max_white_1.jpg", 13400000, 0));
             listsp.Add(new Product("Iphone SE 2", "10", "btl/images/sp/iphone/iphoneSE.jpg", 9700000, 7));
+            listsp.Add(new Product("Iphone 12 Pro Max", "11", "btl/images/sp/iphone/iphone_12_pro_max_white_1.jpg", 13400000, 0));
+            listsp.Add(new Product("Iphone SE 2", "12", "btl/images/sp/iphone/iphoneSE.jpg", 9700000, 7));
+
 
             Application["sanpham"] = listsp;
 
@@ -39,6 +44,8 @@ namespace TechHouseBTL
             List<Oder> list = (List<Oder>)Application["oder"];
             Application["oder"] = list;
             
+
+            //thanh toan
 
         }
 

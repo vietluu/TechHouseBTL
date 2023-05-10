@@ -22,7 +22,7 @@
   
 		  
 		 <form id="form" runat="server">
-			   <h1>Đăng Nhập</h1>
+			 <h1>Đăng Nhập</h1>
 			 <div class="input-control">
 			   <label for="email">Email</label>
 			   <input id="email" name="email" type="email">
@@ -35,8 +35,11 @@
 			   <div class="error" id="error"></div>
 		    </div>
 
-		    <div class="error" id="loginerr" runat="server"></div>
-		    <button type="submit">Sign In</button>
+
+		    <input id="dn" name="dn" runat="server" type="submit" value="Sign In" 
+				style="padding: 10px 179px;font-size: 15px;border: none;background-color: #4a96fa;color: white;border-radius: 15px; cursor:pointer;"></input>
+
+		    <div class="error" id="loginerr" style="color:red;" runat="server"></div>
 		 </form>
 		    
 		
